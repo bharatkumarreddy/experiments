@@ -13,6 +13,7 @@ class FourierUnit(nn.Module):
         ffc3d=False,
         fft_norm='ortho'
     ):
+        super(FourierUnit, self).__init__()
         self.ffc3d = ffc3d
         self.fft_norm = fft_norm
         self.conv_layer = nn.Conv2d(in_channels= in_channels*2, out_channels=out_channels*2,kernel_size=1,stride=1,padding=0,bias=False)
